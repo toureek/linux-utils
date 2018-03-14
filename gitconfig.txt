@@ -1,0 +1,16 @@
+[user]
+        #Github.com
+	name = toureek
+	email = june.key.young@gmail.com
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	rb = rebase
+	mg = merge
+	cp = cherry-pick
+
+# git config --global user.name "toureek"
+# git config --global user.email june.key.young@gmail.com

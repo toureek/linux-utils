@@ -1,0 +1,58 @@
+alias l='ls -lh'
+alias ll='ls -alh'
+alias L='ls'
+alias LL='ls -alh'
+alias CD='cd'
+alias gitlog='git log --graph'
+alias VI='vi'
+alias startmysql='mysql.server start'
+alias startsshvbox='ssh -l iamtheyoung -p 1111 127.0.0.1'
+alias startsshvbox='ssh -l iamtheyoung -p 1111 127.0.0.1'
+alias startlocallinuxvbox='vboxmanage startvm ubuntu-server --type headless'
+alias stoplocallinuxvbox='vboxmanage controlvm ubuntu-server poweroff'
+alias checkusb='system_profiler SPUSBDataType'
+alias podlocal='pod install --verbose --no-repo-update'
+
+set -o vi
+export SVN_EDITOR=vi
+
+export PATH=/usr/local:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.composer/vendor/bin:/usr/local/Cellar/mysql/5.7.17/bin
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# export PS1='[Young \W] $ '
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+export PS1="--------------------   | \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]\n| IamtheYoung => "
+export PS2="| => "
+
+export PATH=$PATH:/Users/younghacker/Documents/Developer/platform-tools
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+
+
+#----------------------------------
+# [MySQL Config]  mysql -uroot -pBlackberry8310!
+# mysql> create user 'young'@'111.11.111.111' identified by 'Blackberry1@#'; # Query OK, 0 rows affected (0.00 sec)
+# 
+# mysql> grant all on young.* to 'thinkpad'@'111.11.1.121';
+# Query OK, 0 rows affected (0.00 sec)
+# 
+# mysql> flush privileges;
+# Query OK, 0 rows affected (0.00 sec)
+#
+# # [PHP version >= 7.0]
+#  sudo apt-get install php-xml php-mbstring php7.0-zip
+#  composer create-project --prefer-dist laravel/laravel=5.4.23 blog
+# 
+# Local: password-password;  young-1111
+# Remote: password-passcode@#; root-1111
+#----------------------------------
+
+export PATH="/usr/local/sbin:$PATH"

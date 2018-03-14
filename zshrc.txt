@@ -1,0 +1,60 @@
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+set -o vi
+
+alias VI='vi'
+alias l='ls -lh'
+alias ll='ls -alh'
+alias L='ls'
+alias LL='ls -alh'
+alias CD='cd'
+alias podlocal='pod install --verbose --no-repo-update'
+alias svnlog='svn log | more'
+alias svnfetch='svn up'
+alias svnst='svn st'
+alias gitlog='git log --graph'
+alias startmysql='mysql.server start'
+alias startsshvbox='ssh -l iamtheyoung -p 1111 127.0.0.1'
+alias startlocallinuxbox='vboxmanage startvm ubuntu-server --type headless'
+alias stoplocallinuxvbox='vboxmanage controlvm ubuntu-server poweroff'
+
+export JAVA_8_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=$JAVA_8_HOME
+export SVN_EDITOR=vi
+alias jdk8='export JAVA_HOME=$JAVA_8_HOME'
+
+export PATH=/usr/local:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.composer/vendor/bin:/usr/local/Cellar/mysql/5.7.17/bin
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}:$HOME/Library/Python/3.6/bin"
+export PATH
+
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+setopt prompt_subst
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' actionformats \
+    '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
+zstyle ':vcs_info:*' formats       \
+    '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+
+zstyle ':vcs_info:*' enable git cvs svn
+
+# or use pre_cmd, see man zshcontrib
+vcs_info_wrapper() {
+  vcs_info
+  if [ -n "$vcs_info_msg_0_" ]; then
+    echo "%{$fg[grey]%}${vcs_info_msg_0_}%{$reset_color%}$del"
+  fi
+}
+RPROMPT=$'$(vcs_info_wrapper)'
+export PS1="-------------------- | %d 
+| IamtheYoung =>  "
+
+
