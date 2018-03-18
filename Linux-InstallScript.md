@@ -1,39 +1,49 @@
-##Do one thing at a time, and do well. 
+	rpm -e --nodeps java-1.8.0-openjdk-headless-1.8.0.144-7.b01.fc27.x86_64
+	dnf install -y docker docker-compose
+	yum install -y gimp
+	dnf install -y corebird
+	dnf install -y go
+	dnf install -y dnf-plugins-core
+	dnnf copr enable heliocastro/hack-fonts
+	dnf copr enable heliocastro/hack-fonts
+	dnf install -y hack-fonts
+	dnf install -y gnome-tweak-tool
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/doctormo/GimpPs/master/tools/install.sh)"
+	dnf install -y gcc-c++
+	dnf install -y p7zip p7zip-plugins
+	dnf install -y unrar
+	dnf remove -y libreoffice
+	dnf install -y wps-office
+	dnf install -y libpng12.x86_64
+	dnf install -y mesa-libGLU.x86_64
+	dnf install -y shutter
+	dnf install -y peek
+	dnf install -y mecab-ipadic.x86_64
+	dnf install -y https://dev.mysql.com/get/mysql57-community-release-fc27-10.noarch.rpm
+	dnf install -y mysql-community-server
 
+	#grep 'A temporary password is generated for root@localhost' /var/log/mysqld.log |tail -1
+	#/usr/bin/mysql_secure_installation
 
- 1. <h3> Easy come, Easy Go in VI / VIM<h3> 
-    <h4>Open a file in VI within a bash, zsh, ksh, etc.<h4> 
+	dnf install -y pcre-cpp.x86_64
+	dnf install -y  libzip
+	dnf install -y  proj
+	dnf install -y  lm_sensors
+	dnf install -y  python2-crypto.x86_64
+	dnf install -y  python-paramiko-doc.noarch
+	dnf install -y  mingw64-libzip.noarch
+	dnf install -y shadowsocks-qt5
+	curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
+	yum install -y nodejs
+	dnf install -y glibc.x86_64
+	yum install -y shadowsocks-qt5
+	yum install -y R-core
+	dnf install -y redhat-lsb.x86_64
 
-	 	`vi 2017.txt`    // Open a file named 2017.txt in VI window. 
-
-	 	`:q`   // Just quit from VI window. 
-	 	
-	 	`:wq`  // Save current text content and quit from VI window. 
-	 	
-	 	`:q!`  // Ignore everything in 2017.txt and Quit from VI window forcely.
-	 	 
-
- 2. <h3> Basic but important modes in VI.<h3>
-	 	<h4>There are 3 different modes in vi text editor.<h4>
-	 	
-	 	- Command Mode.		　(You can use vi-command to handle with any textString)
-	 	- Insert Input Mode.　(You can text anything whatever you want)
-	 	- Last line Mode.　　(You can use ':' to call other vi-commands in Command Mode)
-
-	 		 1. ESC   ---------> Make VI into Command-Mode 
-	 		 2. a(append), i(insert), o(open-in-the-next-line)　　----> Make VI into Insert Mode 
-	 		 3. : ------->  Make VI into last line mode 
-	 		 
-
- 3. <h3> Start from the sence of playing games in VI.<h3>
-	 <h4>I believe that you have ever played Computer-Games or Game console before. We can press the keyboard of "[W / ↑], [S / ↓], [A / ←], [D / →]" to control the orientations in the game. As the same way, we can use another 4 keys to control the input-source. By the way, We should be more attention to every single letter, especially for its Uppercase style and Lowercase style, because even the same letter in different style means different operation in VI. 
-
-
-	 + j	  ------------->   Turn down  ↓   (Lowercase style)
-	 + k     ------------->   Turn up   ↑       (Lowercase style)
-	 + h	  ------------->   Turn left  ←   (Lowercase style)
-	 + l	  ------------->   Turn right →   (Lowercase style)
-	 + :help  -------> It is the only command that we can trust while texting.
- 
-
+#	systemctl start mysqld.service
+#	systemctl enable mysqld.service
+#	systemctl disable firewalld.service
+#	systemctl stop firewalld.service 
+#	systemctl enable firewalld.service
+#	systemctl start firewalld.service 
 
