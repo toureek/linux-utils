@@ -1,4 +1,4 @@
-##Basic Linux Command in Development   
+# Basic Linux Command in Development   
 * <B><H3>Part of the basic shell in Terminals (Bash / Zsh / Ksh, etc). <H3><B>
    
 	 <h4>When you want to filter and search text-content in a file or in a folder which even contains thousands of files without any IDE especially when you are just connecting to the remote server in ssh-tunnel from the terminal, you can just simply use the grep command very easily.</h4>
