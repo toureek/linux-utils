@@ -1,8 +1,7 @@
-##Basic shell functions in developing 
+##Basic Linux Command in Development   
 * <B><H3>Part of the basic shell in Terminals (Bash / Zsh / Ksh, etc). <H3><B>
    
- 1. <h3> [grep expression] && [find path expression]<h3>
-	 <h4>When you want to filter and search text-content in a file or in a folder which even contains thousands of files without any IDE especially when you are just connecting to the remote server in ssh-tunnel from the terminal, you can just simply use the grep command very easily.
+	 <h4>When you want to filter and search text-content in a file or in a folder which even contains thousands of files without any IDE especially when you are just connecting to the remote server in ssh-tunnel from the terminal, you can just simply use the grep command very easily.</h4>
 
 	 eg1. Filter and search in the known files
 		  
@@ -32,14 +31,13 @@
         
      other examples:
      
-     eg5. `find . -name "*.swift" | grep *viewcontroller` 
+     eg5. `find . -name "*.swift" | grep -i *viewcontroller` 
      
-     eg6. `ps -ef | grep java` 
+     eg6. `ps -ef | grep -i java` 
      
-     eg7. `curl http://www.baidu.com | grep http` <h4>
+     eg7. `curl http://www.baidu.com | grep -i http` 
      
+     eg8. `rpm -qa | grep -i targetName`  
      
+     eg9. `curl http://www.baidu.com | jq .`  
      
-     
-
-

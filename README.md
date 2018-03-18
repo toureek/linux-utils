@@ -9,3 +9,5 @@ My native bashrc/bash_profile, zshrc and gitconfig config files without any plug
 
 
 
++ Linux  
+    - [< Basic Linux Command in Development >](Linux-ReadMe.md)  
